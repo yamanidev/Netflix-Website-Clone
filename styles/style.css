@@ -6,19 +6,80 @@
 }
 
 body {
+  font-size: 16px;
+  color: white;
   background-color: #000;
-  color: #999;
   font-family: 'Arial', sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
 }
 
 .showcase {
   height: 93vh;
   background-image: url("https://i.ibb.co/vXqDmnh/background.jpg");
-  border-bottom: 8px solid #222;
+}
+
+.showcase-top {
+  height: 90px;
+  position: relative;
+}
+
+.showcase-top img {
+  width: 10.4375rem;
+  height: 2.8125rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.showcase-top a {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: inline-block;
+  background-color: #e50914;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 5px;
+}
+
+.showcase-top a:hover {
+  color: #ccbcbc;
+}
+
+.showcase-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.showcase-main p {
+  color: #999;
+}
+
+.showcase-main a {
+  text-decoration: none;
+  color: white;
+  border: none;
+  background-color: #e50914;
+  border-radius: 5px;
+  width: 20rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.3rem;
 }
 /*# sourceMappingURL=style.css.map */
