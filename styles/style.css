@@ -1,85 +1,226 @@
+:root {
+  --primary-color: #e50914;
+  --dark-color: #141414;
+}
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 body {
-  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: black;
+  color: #999;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
   color: white;
-  background-color: #000;
-  font-family: 'Arial', sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+img {
+  width: 100%;
 }
 
 .showcase {
+  width: 100%;
   height: 93vh;
-  background-image: url("https://i.ibb.co/vXqDmnh/background.jpg");
+  position: relative;
+  background: url("https://i.ibb.co/vXqDmnh/background.jpg") no-repeat center center/cover;
+}
+
+.showcase::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 120px 100px 250px black, inset -120px -100px 250px black;
 }
 
 .showcase-top {
-  height: 90px;
   position: relative;
+  height: 90px;
+  z-index: 2;
 }
 
 .showcase-top img {
-  width: 10.4375rem;
-  height: 2.8125rem;
+  width: 170px;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .showcase-top a {
   position: absolute;
-  right: 0%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-content {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9rem;
+  z-index: 2;
+}
+
+.showcase-content h1 {
+  font-weight: 700;
+  font-size: 5.2rem;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+}
+
+.showcase-content p {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+  font-size: 1.9rem;
+  line-height: 1.25;
+  margin: 0 0 2rem;
+}
+
+/* Tabs */
+
+.tabs {
+  background: var(--dark-color);
+  padding-top: 1rem;
+  border-bottom: 3px solid #3d3d3d;
+}
+
+.tabs .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem
+}
+
+.tabs p {
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+}
+
+.tabs .container>div {
+  padding: 1.5rem 0;
+}
+
+.tabs .container>div:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.tab-border {
+  border-bottom: var(--primary-color) 4px solid;
+}
+
+#tab-1-content .tab-1-content-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-content {
+  padding: 3rem 0;
+  background: black;
+  color: white;
+}
+
+/* End tabs */
+
+/* Text utility */
+
+.text-xl {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-lg {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-dark {
+  color: #999;
+}
+
+/* End text utility*/
+
+/*Buttons utility*/
+
+.btn {
   display: inline-block;
-  background-color: #e50914;
-  text-decoration: none;
-  color: #fff;
-  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: white;
+  padding: .4rem 1.3rem;
   font-size: 1rem;
   text-align: center;
   border: none;
   cursor: pointer;
+  margin-right: .5rem;
   outline: none;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 2px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-rounded {
   border-radius: 5px;
 }
 
-.showcase-top a:hover {
-  color: #ccbcbc;
+.btn-xl {
+  font-size: 2rem;
+  padding: 1.5rem 2.1rem;
+  text-transform: uppercase;
 }
 
-.showcase-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.btn-lg {
+  padding: 0.8rem 1.3rem;
+  text-transform: uppercase;
 }
 
-.showcase-main p {
-  color: #999;
-}
-
-.showcase-main a {
-  text-decoration: none;
-  color: white;
-  border: none;
-  background-color: #e50914;
-  border-radius: 5px;
-  width: 20rem;
-  height: 3rem;
-  text-align: center;
-  font-size: 1.3rem;
-}
-/*# sourceMappingURL=style.css.map */
+/*End buttons utility*/
