@@ -109,6 +109,23 @@ img {
 
 /* Tabs */
 
+.container {
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem
+}
+
+#tab-1-content,
+#tab-2-content,
+#tab-3-content {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
 .tabs {
   background: var(--dark-color);
   padding-top: 1rem;
@@ -122,13 +139,6 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.container {
-  max-width: 70%;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 2rem
 }
 
 .tabs p {
@@ -222,6 +232,10 @@ img {
 /* End text utility*/
 
 /*Buttons utility*/
+
+.btn-icon {
+  margin-left: 1rem;
+}
 
 .btn {
   display: inline-block;
